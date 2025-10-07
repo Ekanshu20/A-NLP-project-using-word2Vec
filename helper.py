@@ -4,7 +4,16 @@ import distance
 from fuzzywuzzy import fuzz
 import pickle
 import numpy as np
+import nltk
+
 # from nltk.tokenize import word_tokenize
+
+# Download required NLTK data
+nltk.download('stopwords', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+
+from nltk.corpus import stopwords
+STOP_WORDS = set(stopwords.words('english'))
 
 word2vec_model = pickle.load(open('w2v.pkl','rb'))
 
@@ -340,6 +349,7 @@ def query_point_creator(q1,q2):
   # print("Shape of conc_arr_w2v:", conc_arr_w2v.shape)
 
   # input_adjusted_array = np.array(input_query).reshape(1,22)
+
 
 
 
