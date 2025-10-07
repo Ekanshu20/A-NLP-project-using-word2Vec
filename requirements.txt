@@ -2,5 +2,5 @@ streamlit
 scikit-learn
 fuzzywuzzy
 distance
-
+gensim
 bs4
